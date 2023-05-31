@@ -1,0 +1,91 @@
+{% extends "base.html"%}
+
+{% block start %}
+
+<form method="post" action="{% url 'predict' %}">
+    {% csrf_token %}
+    
+    <label for="cold">Cold:</label>
+    <select id="cold" name="cold">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="eyepain">Eyepain:</label>
+    <select id="eyepain" name="eyepain">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="fever">Fever:</label>
+    <select id="fever" name="fever">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="headache">Headache:</label>
+    <select id="headache" name="headache">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="stomachache">Stomachache:</label>
+    <select id="stomachache" name="stomachache">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="dizziness">Dizziness:</label>
+    <select id="dizziness" name="dizziness">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="vomiting">Vomiting:</label>
+    <select id="vomiting" name="vomiting">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="chestpain">Chestpain:</label>
+    <select id="chestpain" name="chestpain">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="jointpain">Jointpain:</label>
+    <select id="jointpain" name="jointpain">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="loosemotion">Loosemotion:</label>
+    <select id="loosemotion" name="loosemotion">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="throatinfection">Throatinfection:</label>
+    <select id="throatinfection" name="throatinfection">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+  
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age">
+  
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="3">Male</option>
+      <option value="4">Female</option>
+    </select>
+  
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" name="weight">
+  
+    <input type="submit" value="Predict">
+  </form
+  
+  
+  
+  {% endblock %}
