@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@400;700&display=swap');
+*{
+    background-color: rgb(35, 35, 33);
+}
+.Box{
+    margin: 0%;
+    padding: 0%;
+    background-color: rgb(35, 35, 33);
+}
+.option{
+    margin: 2%;
+    margin-right: 46%;
+    padding: 0%;
+    border-radius: 30%;
+    background-color: rgb(35, 35, 33);
+    margin-top: 0%;
+}
+.select{
+    margin-top: 0%;
+    padding: 0%;
+    margin-left: 20%;
+    bottom: 20%;
+    background-color: rgb(35, 35, 33);
+}
+.heading{
+    font-family: 'Foldit', cursive;
+    margin-bottom: 0%;
+    font-size: 80px;
+    background: -webkit-linear-gradient(orange, blue, green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+.des{
+    font-size: 20px;
+    color: aliceblue;
+    text-align: justify;
+}
+.selbut{
+    position: relative;
+    padding: 0.6em 4em;
+    color: aqua;
+    font-size: 1.15rem;
+    border-radius: 5%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    font-display: auto;
+}
+.head{
+    margin: 5%;
+    margin-bottom: 0%;
+    padding: 1%;
+}
+svg{
+    color: #fff;
+}
