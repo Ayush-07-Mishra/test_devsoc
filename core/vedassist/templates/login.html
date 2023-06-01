@@ -1,13 +1,24 @@
 {% extends "base.html"%}
 
+
 {% block start %}
-
-<div class = "container mt-5"> 
-    <form class= "col-6 mx-auto card p-3 shadow.lg" method="POST" enctype="multipart/form-data" action="{% url "login_page" %}">
+  <section>
+    <div class="piles">
+        <div class="set">
+            <div><img src="../static/pil1.png"></div>
+            <div><img src="../static/pil2.png"></div>
+            <div><img src="../static/pil3.png"></div>
+            <div><img src="../static/pil4.png"></div>
+            <div><img src="../static/pil5.png"></div>
+            <div><img src="../static/pil1.png"></div>
+            <div><img src="../static/pil2.png"></div>
+            <div><img src="../static/pil3.png"></div>
+        </div>
+    </div>
+    <img src="../static/bg.jpg" class="bg">
+    <img src="../static/doctor.png" class="doctor">
+    <form class= "login" method="POST" enctype="multipart/form-data">
       {% csrf_token %}
-      <hr>
-
-      <h2> Login </h2>
       {% if messages %}
       {{ message.tags }}
       <div class="alert alert-primary" role="alert">
@@ -17,22 +28,23 @@
 
       </div>
         {% endif %}
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Username</label>
-          <input name="username"  required type="text" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input name="password" type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-
-        <p> Don't have account <a href ="{% url "register" %}">register</a> </p>
-        
-          
-        <button type="submit" class="btn btn-primary">Submit</button>
+              <h2>Login</h2>
+              <div class="inputbox">
+                  <input type="text" placeholder="Username" name="username" required>
+              </div>
+              <div class="inputbox">
+                  <input type="password" placeholder="Password" name="password">
+              </div>
+              <div class="inputbox">
+                  <input type="submit" value="login" id="btn">
+              </div>
+              <div class="group">
+                  <a href="#">Forget Password</a>
+                  <a href="/register">Register</a>
+              </div>
+      
     </form>
-
-</div>
+  </section>
 
     
 {% endblock %}
