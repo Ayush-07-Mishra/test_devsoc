@@ -35,19 +35,19 @@ def predict(request):
     if request.method == 'POST':
         # Retrieve user input from the form
         user_input = [
-            request.POST.get('cold').lower(),
-            request.POST.get('eyepain').lower(),
-            request.POST.get('fever').lower(),
-            request.POST.get('headache').lower(),
-            request.POST.get('stomachache').lower(),
-            request.POST.get('dizziness').lower(),
-            request.POST.get('vomiting').lower(),
-            request.POST.get('chestpain').lower(),
-            request.POST.get('jointpain').lower(),
-            request.POST.get('loosemotion').lower(),
-            request.POST.get('throatinfection').lower(),
+            0 if request.POST.get('cold') == 'yes' else 1,
+            0 if request.POST.get('eyepain') == 'yes' else 1,
+            0 if request.POST.get('fever') == 'yes' else 1,
+            0 if request.POST.get('headache') == 'yes' else 1,
+            0 if request.POST.get('stomachache') == 'yes' else 1,
+            0 if request.POST.get('dizziness') == 'yes' else 1,
+            0 if request.POST.get('vomiting') == 'yes' else 1,
+            0 if request.POST.get('chestpain') == 'yes' else 1,
+            0 if request.POST.get('jointpain') == 'yes' else 1,
+            0 if request.POST.get('loosemotion') == 'yes' else 1,
+            0 if request.POST.get('throatinfection') == 'yes' else 1,
             int(request.POST.get('age')),
-            int(request.POST.get('gender')),
+            request.POST.get('gender'),
             int(request.POST.get('weight'))
         ]
 
@@ -507,7 +507,7 @@ def login_page(request):
         else:
             login(request,user)       # iska name(lgoin()) aur function ka name (login_page) diffrent hona chaiye 
                         # varna infiniite loop chlenga 
-            return redirect('/home/')
+            return redirect('/test/')
 
 
     return render(request, 'login.html')
