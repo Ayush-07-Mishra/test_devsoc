@@ -4,6 +4,9 @@
 
 <form method="post" action="{% url 'predict' %}">
     {% csrf_token %}
+
+    <h4>Welcome {{request.user}} </h4>
+    <hr>
     
     <label for="cold">Cold:</label>
     <select id="cold" name="cold">
