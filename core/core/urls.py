@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from vedassist.views import *
 from django.conf import settings 
 from django.conf.urls.static import static
@@ -24,8 +24,17 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 
+
 urlpatterns = [
-    path('' , include("vedassist.urls")),
+    path('' ,home,name="home"),
+    path('login/' ,login_page,name="login_page"),
+    path('predict/',predict, name='predict'),
+    path('register/' ,register,name="register"),
+    path('test/' ,test,name="test"),
+    path('result/' ,result,name="result"),
+    path('logout/',logout_page,name="logout_page"),
+
+
     path("admin/", admin.site.urls),
 ]
 
