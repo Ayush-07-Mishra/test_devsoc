@@ -1,9 +1,12 @@
 import pandas as pd
+from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
+import joblib
+import pickle
 
 # Load the data from CSV file
-data = pd.read_csv('Practice/vedassistdata.csv')
+data = pd.read_csv('C:/Users/varad/Documents/test_devsoc/core/vedassist/ml_model/vedassistdata.csv')
 
 # Separate the features (X) and target (y) variables
 X = data.drop(['Ayurvedic Medicine', 'Ayurvedic Medicine1', 'Ayurvedic Medicine2'], axis=1)
@@ -26,8 +29,10 @@ user_inputs_list = user_inputs_str.split(',')
 
 
 # Make predictions
-if(x == 0 for x in user_inputs_list[:10]):
+if(user_inputs_list[:10] == [0,0,0,0,0,0,0,0,0,0,0]):
     print("You dont have any disease!")
 else:
     predictions = classifier.predict([user_inputs_list])
     print("Predicted Ayurvedic Medicines:", predictions)
+    
+joblib.dump(classifier, 'model.pkl')
