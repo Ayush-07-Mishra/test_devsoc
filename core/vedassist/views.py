@@ -6,18 +6,12 @@ from django.contrib import messages
 from django.contrib.auth import authenticate ,login ,logout
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.urls import reverse
 
-  # @login_required(login_url='/login/')
+
 def home(request):
     return render(request , 'home.html')
     
-
-
-
-
-
-
-
 
 def login_page(request):
     if request.method =="POST":
@@ -46,12 +40,10 @@ def login_page(request):
 
 def logout_page(request):
     logout(request)
-    return redirect('/login')
+    return redirect(reverse("login_page"))
 
 
 def register(request):
-
-
 
     if request.method != "POST":
         return render(request, 'register.html')
