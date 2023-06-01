@@ -460,7 +460,7 @@ def predict(request):
             eyepain=user_input[1],
             fever=user_input[2],
             headache=user_input[3],
-            stomachache=user_input[4],
+            stomachache=user_input[4],  
             dizziness=user_input[5],
             vomiting=user_input[6],
             chestpain=user_input[7],
