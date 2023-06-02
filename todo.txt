@@ -1,0 +1,23 @@
+Girendra:   - Complete home.html
+            - Small changes to login and register.html
+            - test.html
+            - result.html
+            - addmedicine.html
+            - checkout.html
+            - cart.html
+            - shop.html
+            - button animation in all pages
+
+
+Ayush:      - add to db:  sno, name, pictures, quantity, price
+            - display medicine name with description and buy option in result page
+            - these should be editable via /admin
+            - all medicines display (as table) with search (in shop page)
+            - add to cart functionality
+            - connect payments (django paypal) to checkout
+            - display nearby ayurvedic hospitals and pharmacies
+
+
+Sahil:      - Descriptions of medicines along with ingredients used (result page)
+            - Pictures of the ingredients used (for front page)
+            - Add complexity to ML model (more data if possible)

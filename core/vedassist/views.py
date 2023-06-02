@@ -16,7 +16,8 @@ def home(request):
     
 @login_required(login_url="/login/")
 def test(request):
-    return render(request, 'test.html')
+    user = request.user
+    return render(request, 'test.html', {'user': user})
 
 
 @login_required(login_url="/login/")
