@@ -8,6 +8,7 @@ downloads_dir = os.path.join(home_dir, "Documents/test_devsoc/core/vedassist/ml_
 classifier = joblib.load(downloads_dir)
 
 def model_predict(user_input):
+    # sourcery skip: inline-immediately-returned-variable
     user_input = user_input.split(',')
     user_data = pd.DataFrame({ 'Cold': [user_input[0]],
             'Eyepain' :[user_input[1]],
