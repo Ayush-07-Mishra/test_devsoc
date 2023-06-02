@@ -15,6 +15,7 @@ Ayush:      - add to db:  sno, name, pictures, quantity, price
             - all medicines display (as table) with search (in shop page)
             - add to cart functionality
             - connect payments (django paypal) to checkout
+            - display nearby ayurvedic hospitals and pharmacies
 
 
 Sahil:      - Descriptions of medicines along with ingredients used (result page)
